@@ -26,7 +26,9 @@ Route::middleware('auth')->group(function () {
 });
 
 
-Route::get('/todoApp',[TaskController::class, 'index']);
+Route::get('/todoApp', [TaskController::class, 'index']);
+
+
 
 
 require __DIR__.'/auth.php';

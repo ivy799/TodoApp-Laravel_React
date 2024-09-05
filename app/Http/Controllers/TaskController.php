@@ -14,8 +14,11 @@ class TaskController extends Controller
      */
     public function index()
     {
-        return Inertia::render('HomePage',[
-            'title' => "todo-app"
+        // Fetch all tasks from the database
+        $task = task::all();
+        return inertia::render('HomePage', [
+            'title' => "todo-app",
+            'task' => $task
         ]);
     }
 
@@ -40,7 +43,11 @@ class TaskController extends Controller
      */
     public function show(task $task)
     {
-        //
+        // // Fetch all tasks from the database
+        // $task = task::all();
+
+        // // Return tasks as a JSON response
+        // return response()->json($task);
     }
 
     /**
