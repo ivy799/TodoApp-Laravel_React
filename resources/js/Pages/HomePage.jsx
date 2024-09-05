@@ -11,7 +11,7 @@ export default function HomePage(props){
       <Head title={props.title}/>
       <MainSection />
       <Section_1 />
-      <Section_2/>
+      <Section_2 task={props.task} />  {/* Meneruskan props.task ke Section_2 */}
     </div>
   )
 }

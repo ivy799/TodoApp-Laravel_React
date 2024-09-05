@@ -15,12 +15,13 @@ class TaskController extends Controller
     public function index()
     {
         // Fetch all tasks from the database
-        $task = task::all();
-        return inertia::render('HomePage', [
+        $task = Task::all();
+        return Inertia::render('HomePage', [
             'title' => "todo-app",
             'task' => $task
         ]);
     }
+
 
     /**
      * Show the form for creating a new resource.
