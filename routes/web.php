@@ -26,6 +26,8 @@ Route::middleware('auth')->group(function () {
 });
 
 
+
+
 Route::get('/todoApp', [TaskController::class, 'index']);
 
 

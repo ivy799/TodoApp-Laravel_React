@@ -5,13 +5,14 @@ import MainSection from './mainSection';
 import Section_2 from './section-2';
 
 export default function HomePage(props){
-  console.log(props)
   return(
-    <div className='flex justify-center items-center flex-col min-h-screen'>
+    <div className='flex flex-row min-h-screen bg-zinc-800 p-3'>
       <Head title={props.title}/>
-      <MainSection />
-      <Section_1 />
-      <Section_2 task={props.task} />  {/* Meneruskan props.task ke Section_2 */}
+      <div className='flex-col basis-2/4 min-h-screen justify-around bg-white'>
+        <MainSection className = "flex justify-center item-center flex-col text-white "/>
+        <Section_1 className = "flex justify-between gap-x-4 w-full"/>
+        <Section_2 className = "flex flex-col w-full justify-center items-center bg-neutral-800 text-white text-2xl rounded gap-y-3" task={props.task} />
+      </div>
     </div>
   )
 }
