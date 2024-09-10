@@ -8,9 +8,9 @@ export default function HomePage(props){
   return(
     <div className='flex flex-row min-h-screen bg-zinc-800 p-3'>
       <Head title={props.title}/>
-      <div className='flex-col basis-2/4 min-h-screen justify-around bg-white'>
+      <div className='grid basis-2/4 min-h-screen content-start gap-y-5'>
         <MainSection className = "flex justify-center item-center flex-col text-white "/>
-        <Section_1 className = "flex justify-between gap-x-4 w-full"/>
+        <Section_1 className = "flex gap-x-4 w-full"/>
         <Section_2 className = "flex flex-col w-full justify-center items-center bg-neutral-800 text-white text-2xl rounded gap-y-3" task={props.task} />
       </div>
     </div>
