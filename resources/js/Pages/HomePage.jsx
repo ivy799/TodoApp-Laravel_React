@@ -4,15 +4,20 @@ import Section_1 from './section-1';
 import MainSection from './mainSection';
 import Section_2 from './section-2';
 
-export default function HomePage(props){
-  return(
-    <div className='flex flex-row min-h-screen bg-zinc-800 p-3'>
-      <Head title={props.title}/>
-      <div className='grid basis-2/4 min-h-screen content-start gap-y-5'>
-        <MainSection className = "flex justify-center item-center flex-col text-white "/>
-        <Section_1 className = "flex gap-x-4 w-full"/>
-        <Section_2 className = "flex flex-col w-full justify-center items-center bg-neutral-800 text-white text-2xl rounded gap-y-3" task={props.task} />
+export default function HomePage(props) {
+  return (
+    <div className='grid lg:grid-cols-12 min-h-screen bg-zinc-800 p-3 gap-5'>
+      <Head title={props.title} />
+      <div className='grid col-span-12 lg:col-span-6 content-start gap-y-5'>
+        <MainSection className="flex justify-center items-center flex-col text-white" />
+        <Section_1 className="flex gap-x-4 w-full"/>
+        <Section_2 className="flex flex-col w-full justify-center items-center text-white text-2xl rounded gap-y-3" task={props.task} />
+      </div>
+      <div className='grid col-span-12 lg:col-span-6 content-start gap-y-5'>
+        <MainSection className="flex justify-center items-center flex-col text-white" />
+        <Section_1 className="flex gap-x-4 w-full" />
+        <Section_2 className="flex flex-col w-full justify-center items-center text-white text-2xl rounded gap-y-3" task={props.task} />
       </div>
     </div>
-  )
+  );
 }
