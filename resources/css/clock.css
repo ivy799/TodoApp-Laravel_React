@@ -1,0 +1,39 @@
+@font-face{
+    font-family: 'Digital-7';
+    src:  url('fonts/digital-7.ttf') format('woff2'),
+    url('digital-7.woff') format('woff');
+}
+.clockdate-wrapper {
+    --tw-bg-opacity: 1;
+    background-color: rgb(39 39 42 / var(--tw-bg-opacity)) /* #27272a */;
+    padding:25px;
+    max-width:100%;
+    width:100%;
+    text-align:center;
+    border-radius:15px;
+    margin:0 auto;
+    --tw-shadow: 0 35px 60px -15px rgba(0,0,0,0.5);
+    --tw-shadow-colored: 0 35px 60px -15px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  
+}
+#clock{
+    font-family: Digital-7, 'sans-serif';
+    font-size:60px;
+    text-shadow:0px 0px 1px #fff;
+    color:#fff;
+}
+#clock span {
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow:0px 0px 1px #333;
+    font-size:50px;
+    position:relative;
+    top:-5px;
+    left:10px;
+}
+#date {
+    letter-spacing:3px;
+    font-size:14px;
+    font-family:arial,sans-serif;
+    color:#fff;
+}
