@@ -29,6 +29,7 @@ Route::middleware('auth')->group(function () {
 
 
 Route::get('/todoApp', [TaskController::class, 'index']);
+Route::delete('/todoApp/{id}', [TaskController::class, 'destroy']);
 
 
 

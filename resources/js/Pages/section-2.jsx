@@ -1,15 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, Head } from '@inertiajs/react';
 import TaskItem from './TaskItem';  // Mengimpor komponen TaskItem
 
 export default function Section_2(props) {
+  const [tasks, setTasks] = useState(props.task || []);
+
+  // Callback untuk menghapus task dari state
+  const handleDelete = (taskId) => {
+    setTasks(tasks.filter((task) => task.id !== taskId));
+  };
+
   return (
     <div className={props.className}>
       <Head title={props.title} />
-      {props.task && props.task.length > 0 ? (
-        props.task.map((data, i) => {
+      {tasks.length > 0 ? (
+        tasks.map((data) => {
           return (
-            <TaskItem key={i} task={data.task} />
+            <TaskItem key={data.id} task={data.task} taskId={data.id} onDelete={handleDelete} />
           );
         })
       ) : (

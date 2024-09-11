@@ -11,7 +11,8 @@ export default function HomePage(props) {
     <div className='grid lg:grid-cols-12 min-h-screen bg-zinc-800 p-3 gap-7'>
       <Head title={props.title}/>
       <Head><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" /></Head>
-
+      <meta name="csrf-token" content="{{ csrf_token() }}"></meta>
+      
       <div className='grid col-span-12 lg:col-span-6 p-3 content-start gap-y-5 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.5)] rounded-3xl'>
         <MainSection className="flex justify-center items-center flex-col text-white" />
         <Section_1 className="flex justify-between items-center gap-x-4"/>
