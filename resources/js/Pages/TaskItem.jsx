@@ -5,7 +5,6 @@ import Button from './Button';
 export default function TaskItem({ task, taskId, onDelete }) {
   const handleDelete = async () => {
     try {
-      // Kirim request DELETE ke server Laravel
       await axios.delete(`/todoApp/${taskId}`, {
         headers: {
           'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')

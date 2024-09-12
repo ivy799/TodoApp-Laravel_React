@@ -30,7 +30,7 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/todoApp', [TaskController::class, 'index']);
 Route::delete('/todoApp/{id}', [TaskController::class, 'destroy']);
-Route::post('/todoApp', [TaskController::class, 'store']);
+// Route::post('/todoApp', [TaskController::class, 'store']);
 
 
 

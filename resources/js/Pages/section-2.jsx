@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { Link, Head } from '@inertiajs/react';
-import TaskItem from './TaskItem';  // Mengimpor komponen TaskItem
+import TaskItem from './TaskItem'; 
 
 export default function Section_2(props) {
   const [tasks, setTasks] = useState(props.task || []);
 
-  // Callback untuk menghapus task dari state
   const handleDelete = (taskId) => {
     setTasks(tasks.filter((task) => task.id !== taskId));
   };
