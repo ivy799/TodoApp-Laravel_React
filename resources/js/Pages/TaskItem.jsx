@@ -6,12 +6,11 @@ export default function TaskItem({ task, taskId, onDelete }) {
   const handleDelete = async () => {
     try {
       // Kirim request DELETE ke server Laravel
-      await axios.delete(`/api/tasks/${taskId}`, {
+      await axios.delete(`/todoApp/${taskId}`, {
         headers: {
           'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
         }
       });
-      // Panggil callback untuk mengupdate UI setelah sukses
       if (onDelete) {
         onDelete(taskId);
       }

@@ -36,7 +36,10 @@ class TaskController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $Task = new task();
+        $Task->fill($request->all());
+        $Task->save();
+        return redirect('todoApp')->with('flash_message','task added!'); 
     }
 
     /**
