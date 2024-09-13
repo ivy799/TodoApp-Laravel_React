@@ -3,6 +3,7 @@ import axios from 'axios';
 import Button from './Button';
 
 export default function TaskItem({ task, taskId, onDelete }) {
+
   const handleDelete = async () => {
     try {
       await axios.delete(`/todoApp/${taskId}`, {
